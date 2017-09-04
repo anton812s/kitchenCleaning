@@ -41,6 +41,9 @@ h1 {
   background-color: #ECF0F1;
   border-radius: 5px;
 }
+.task li {
+  margin-bottom: 10px;
+}
 button {
   position: relative;
   background-color: #E74C3C;
