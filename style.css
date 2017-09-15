@@ -7,17 +7,12 @@ body {
 	font-family: Roboto, sans-serif;
 	color: #fff;
 	background: #e8e9e9;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
-h1 {
+h1, p {
   color: gray;
-}
-
-.big-container {
-  display: flex;
-  flex-direction: column;
 }
 
 .container,
@@ -25,17 +20,27 @@ h1 {
 	padding: 10px;
 	background: #fff;
   border-radius: 5px;
-	margin: 10px;
+	width: 100%;
   box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
   display: flex;
 }
 
-.item {
-	color: black;
+.buttons {
+  margin-top: 10px;
+}
+.name,
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+li {
 	padding: 15px;
 	margin: 5px;
 	background: #3db5da;
-	border-radius: 3px;
+	border-radius: 5px;
+
 }
 
 
@@ -49,11 +54,7 @@ button {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  margin-right: 20px;
-}
-
-p {
-  color: gray;
+  flex-grow: 1;
 }
 
 @media print {
@@ -71,10 +72,18 @@ p {
     margin-top: 0;
   }
 
-  .item {
+  li {
+    color: black;
     margin: 0;
   }
   p {
     display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .container,
+  .buttons {
+    flex-wrap: wrap;
   }
 }
