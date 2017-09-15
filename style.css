@@ -28,21 +28,19 @@ h1, p {
 .buttons {
   margin-top: 10px;
 }
-.name,
-.task {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+
+.name li {
+  width: 120px;
 }
 
 li {
-	padding: 15px;
-	margin: 5px;
-	background: #3db5da;
+	padding: 5px 10px;
+	margin-bottom: 5px;
 	border-radius: 5px;
-
+	background: #3db5da;
+	list-style: decimal inside;
+	text-align: left;
 }
-
 
 button {
   padding: 20px;
