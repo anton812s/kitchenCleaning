@@ -1,12 +1,13 @@
 const button = document.querySelector('.generate');
+const name = document.querySelector('.name');
 const printButton = document.querySelector('.print');
-const names = document.querySelector('.name');
 
 button.addEventListener('click', () => {
-  for (var i = names.children.length; i >= 0; i--) {
-      names.appendChild(names.children[Math.random() * i | 0]);
+  for (var i = name.children.length; i >= 0; i--) {
+      name.appendChild(name.children[Math.random() * i | 0]);
   }
 });
+
 printButton.addEventListener('click', () => {
   window.print();
 });
