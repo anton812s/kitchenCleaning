@@ -1,6 +1,6 @@
 const button = document.querySelector('.generate');
 const printButton = document.querySelector('.print');
-const names = document.querySelector('.names');
+const names = document.querySelector('.name');
 
 button.addEventListener('click', () => {
   for (var i = names.children.length; i >= 0; i--) {

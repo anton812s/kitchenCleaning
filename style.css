@@ -1,84 +1,80 @@
-html {
-  background-color: #ECF0F1;
-  font-family: 'Roboto', sans-serif;
+* {
+	box-sizing: border-box;
 }
-.container {
-  width: 80%;
-  background-color: #3498DB;
-  border-radius: 5px;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  box-shadow: 10px 10px 15px #888888;
 
+body {
+	font-size: 1.35em;
+	font-family: Roboto, sans-serif;
+	color: #fff;
+	background: #e8e9e9;
+	padding-left: 5%;
+	padding-right: 5%;
 }
+
 h1 {
-  text-align: center;
-  color: #ECF0F1;
-  padding-top: 20px;
+  color: gray;
 }
-.names {
-  margin-left: 5%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  float: left;
-  width: 15%;
-  display: inline-block;
-  background-color: #ECF0F1;
+
+.big-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container,
+.buttons {
+	padding: 10px;
+	background: #fff;
   border-radius: 5px;
+	margin: 10px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  display: flex;
 }
-.names li {
-  margin-bottom: 10px;
+
+.item {
+	color: black;
+	padding: 15px;
+	margin: 5px;
+	background: #3db5da;
+	border-radius: 3px;
 }
-.task {
-  margin-left: 20px;
-  width: 60%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline-block;
-  background-color: #ECF0F1;
-  border-radius: 5px;
-}
-.task li {
-  margin-bottom: 10px;
-}
+
+
 button {
-  position: relative;
+  padding: 20px;
   background-color: #E74C3C;
-  border: none;
   border-radius: 5px;
   font-size: 28px;
   color: #FFFFFF;
-  padding: 20px;
-  width: 40%;
   text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  margin-left: 5%;
+  margin-right: 20px;
 }
-button:after {
-  content: "";
-  background: #f1f1f1;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
+
 p {
-  color: #ECF0F1;
+  color: gray;
+}
+
+@media print {
+  .buttons {
+    display: none;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    bottom: 0;
+  }
+
+  .big-container,
+  .container {
+    margin-top: 0;
+  }
+
+  .item {
+    margin: 0;
+  }
+  p {
+    display: none;
+  }
 }
